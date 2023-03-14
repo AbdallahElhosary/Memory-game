@@ -1,7 +1,7 @@
 
 let startButton = document.querySelector(".contro-button button");
 let durtion = 1000;
-let mainContainer = document.querySelector(".container.boxs");
+let mainContainer = document.querySelector(".boxs .row");
 let boxs = Array.from(mainContainer.children);
 
 startButton.onclick = function () {
@@ -97,7 +97,6 @@ function matchBoxFunction(firstBlock,secondBlock) {
         secondBlock.classList.add("has-match");
 
         let allMatchedBoxs = boxs.filter(flippedBlock => flippedBlock.classList.contains('has-match'));
-    console.log(allMatchedBoxs)
     if (allMatchedBoxs.length == 20) {
     document.getElementById("full-success").play();
         }
@@ -116,4 +115,3 @@ function matchBoxFunction(firstBlock,secondBlock) {
 
     }
 }
-
